@@ -58,7 +58,7 @@ def serve():
         hitchhiker_source_servicer, server)
     server.add_insecure_port('[::]:50051')
     server.start()
-
+    print("server running on port 50051")
     garbage_collection_interval = 60 * 60  # Run garbage collection every hour, this can be changed or set in a config file
     max_storage_mb = 100 # clear storage After 100 MB is exceeded, this can be changed or set in a config file.
     while True:
