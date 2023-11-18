@@ -56,9 +56,8 @@ def serve():
 
     garbage_collection_interval = 60 * 60  # Run garbage collection every hour
     while True:
-        garbage_collect(100)
         time.sleep(garbage_collection_interval)
-
+        garbage_collect(100)
 
 if __name__ == '__main__':
     serve()

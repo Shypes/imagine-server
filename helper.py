@@ -52,40 +52,52 @@ def process_downloads(client_id):
     return available_files
 
 def deliver_to_destivation(available_files, client_id, destination_id):
-    DATA_SOURCE_PATH = os.path.join(DATA_SOURCE, client_id)
-    DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
+    count = 0
+    if  create_destination_directory(destination_id) is True:
+        for file in available_files:
+            file_path = file.file_id
+            directory_path = os.path.dirname(file_path)
+            if create_sub_files_destination_directory(directory_path, destination_id) is True:
+                if move_file_to_destination(file_path, client_id, destination_id) is True:
+                    count = count + 1
+    return count
+
+def create_destination_directory(destination_id):
     data_directory = True
+    DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
     exists = os.path.exists(DATA_DESTINATION_PATH)
     if exists is False:
         try:
            os.mkdir(DATA_DESTINATION_PATH)
         except OSError:
             data_directory = False
-    count = 0
-    if data_directory is True:
-        for file in available_files:
-            data_directory = True
-            file_path = file.file_id
-            directory_path = os.path.dirname(file_path)
-            if directory_path:
-                exists = os.path.exists(os.path.join(DATA_DESTINATION_PATH, directory_path))
-                if exists is False:
-                    try:
-                        os.mkdir(os.path.join(DATA_DESTINATION_PATH, directory_path))
-                    except OSError:
-                        data_directory = False
-            file_source = os.path.join(DATA_SOURCE_PATH, file_path)
-            file_destination = os.path.join(DATA_DESTINATION_PATH, file_path)
-            exists = os.path.exists(file_destination)
-            if exists is False:
-                count = count + 1
-                shutil.copyfile(file_source, file_destination)
-    return count
+    return data_directory
+
+def create_sub_files_destination_directory(directory_path, destination_id):
+    data_directory = True
+    DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
+    if directory_path:
+        exists = os.path.exists(os.path.join(DATA_DESTINATION_PATH, directory_path))
+        if exists is False:
+            try:
+                os.mkdir(os.path.join(DATA_DESTINATION_PATH, directory_path))
+            except OSError:
+                data_directory = False
+    return data_directory
+
+def move_file_to_destination(file_path, client_id, destination_id):
+    DATA_SOURCE_PATH = os.path.join(DATA_SOURCE, client_id)
+    DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
+    file_source = os.path.join(DATA_SOURCE_PATH, file_path)
+    file_destination = os.path.join(DATA_DESTINATION_PATH, file_path)
+    exists = os.path.exists(file_destination)
+    if exists is False:
+        shutil.copyfile(file_source, file_destination)
+    return not exists
     
 def get_downloads(client_id, destination_id):
     available_files = process_downloads(client_id)
-    count = deliver_to_destivation(available_files, client_id, destination_id)
-    print("New files moved:", count)
+    deliver_to_destivation(available_files, client_id, destination_id)
     return available_files
 
 def get_file_size(file_path):
@@ -119,23 +131,15 @@ def get_garbage_files():
 
 def garbage_collect(max_storage_mb):
     max_storage_usage = max_storage_mb * 1024 * 1024  # Convert MB to bytes
-
     current_storage_usage = get_current_storage_usage()
-
     if current_storage_usage > max_storage_usage:
-
         files = get_garbage_files()
-
         files = sorted(files, key=lambda f: os.path.getmtime(f), reverse=True)
-
         while current_storage_usage > max_storage_usage and len(files) > 0:
             file_to_delete = files.pop()
             file_size = os.path.getsize(file_to_delete)
-            print(file_size)
-            # Delete the file
             try:
                 os.remove(file_to_delete)
             except OSError as e:
                 print(f"Failed to delete file: {file_to_delete}")
-            
             current_storage_usage -= file_size
