@@ -23,17 +23,18 @@ DATA_DESTINATION = os.path.join(DATA_BASE, "destination")
 
 def extract_file_content(file_id, client_id):
     """ Load the file data from client source folder to get the file blob """
-
     DATA_SOURCE_PATH = os.path.join(DATA_SOURCE, client_id)
     file_id = os.path.join(DATA_SOURCE_PATH, file_id)
     file_name, file_extension = os.path.splitext(file_id)
     file_name = os.path.basename(file_name + file_extension)
-    with open(file_id, 'rb') as f:
-        file_data = f.read()
-    file_id = file_id.replace(DATA_SOURCE_PATH+ "/", "")
-    file = HitchhikerSource_pb2.File(file_id=file_id, file_name=file_name,
+    exists = os.path.exists(file_id)
+    if exists is True:
+        with open(file_id, 'rb') as f:
+            file_data = f.read()
+        file_id = file_id.replace(DATA_SOURCE_PATH+ "/", "")
+        file = HitchhikerSource_pb2.File(file_id=file_id, file_name=file_name,
                                         file_type=file_extension, file_blob=file_data)
-    return file
+        return file
     
 def file_is_delivered(file_id, destination_id):
     """ checks if file exist in destintion folder """

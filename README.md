@@ -49,3 +49,28 @@ This will start the server on port `50051`. Ensure that this port is available.
 ```
 python test.py
 ```
+
+Note that if the server keeps running for over an hour based on the current code settings, files in the data folder might be deleted as the garbage collector checks for the file space of 100 MB.
+
+
+This will cause the unit test to fail.
+
+To get the deleted files back, navigate to the client source folder.
+
+
+```
+cd data/pilot04/source/client01
+```
+
+
+Then run the command below.
+
+
+```
+touch 1.txt
+touch 2.txt
+touch 3.txt
+```
+
+
+If the files are deleted and the above steps are carried out to create the file, the unit test will fail on the first run and pass on the second.

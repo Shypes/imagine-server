@@ -33,7 +33,8 @@ class HitchhikerSourceServicer(HitchhikerSource_pb2_grpc.HitchhikerSourceService
         downloaded_files = []
         for file_id in file_ids:
             file = extract_file_content(file_id, client_id)
-            downloaded_files.append(file)
+            if file is not None:
+                downloaded_files.append(file)
         response = HitchhikerSource_pb2.DownloadFileResponse(
             file=downloaded_files)
         return response
