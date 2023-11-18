@@ -6,7 +6,11 @@ import time
 
 from helper import extract_file_content, file_is_delivered, remove_sourse_file, garbage_collect, get_downloads
 
+""" We maintain a static folder for the source; this should be revisited where different server services are required. """
 server_source = "pilot04"
+
+
+""" Implement the gRPC server according to the proto  file. """
 
 class HitchhikerSourceServicer(HitchhikerSource_pb2_grpc.HitchhikerSourceServicer):
 
@@ -54,10 +58,11 @@ def serve():
     server.add_insecure_port('[::]:50051')
     server.start()
 
-    garbage_collection_interval = 60 * 60  # Run garbage collection every hour
+    garbage_collection_interval = 60 * 60  # Run garbage collection every hour, this can be changed or set in a config file
+    max_storage_mb = 100 # clear storage After 100 MB is exceeded, this can be changed or set in a config file.
     while True:
         time.sleep(garbage_collection_interval)
-        garbage_collect(100)
+        garbage_collect(max_storage_mb) 
 
 if __name__ == '__main__':
     serve()

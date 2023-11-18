@@ -3,16 +3,27 @@ import HitchhikerSource_pb2
 import os
 import shutil
 
+
+""" All data will be stored in a dedicated folder that is separate from our codes. """
 data_room = "data"
+
+
+""" We maintain a static folder for the source; this should be revisited where different server services are required. """
 server_source = "pilot04"
 
+
+""" The source base here is static and should be revisited if the data source needs to be dynamic. """
 sourse_base = os.path.join("data", "pilot04")
 
+
+""" static variables for the base, source, and destination folders. """
 DATA_BASE = os.path.join(os.path.dirname(__file__), sourse_base)
 DATA_SOURCE = os.path.join(DATA_BASE, "source")
 DATA_DESTINATION = os.path.join(DATA_BASE, "destination")
 
 def extract_file_content(file_id, client_id):
+    """ Load the file data from client source folder to get the file blob """
+
     DATA_SOURCE_PATH = os.path.join(DATA_SOURCE, client_id)
     file_id = os.path.join(DATA_SOURCE_PATH, file_id)
     file_name, file_extension = os.path.splitext(file_id)
@@ -25,11 +36,15 @@ def extract_file_content(file_id, client_id):
     return file
     
 def file_is_delivered(file_id, destination_id):
+    """ checks if file exist in destintion folder """
+
     DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
     file_destination = os.path.join(DATA_DESTINATION_PATH, file_id)
     return os.path.exists(file_destination)
 
 def remove_sourse_file(file_id, client_id):
+    """ delete the file from source folder """
+
     DATA_SOURCE_PATH = os.path.join(DATA_SOURCE, client_id)
     file_source = os.path.join(DATA_SOURCE_PATH, file_id)
     exists = os.path.exists(file_source)
@@ -37,6 +52,7 @@ def remove_sourse_file(file_id, client_id):
         os.remove(file_source)
 
 def process_downloads(client_id):
+    """ Get a list of files that exist in the client source folder, including subdirectories. """
     available_files = []
     DATA_SOURCE_PATH = os.path.join(DATA_SOURCE, client_id)
     exists = os.path.exists(DATA_SOURCE_PATH)
@@ -47,11 +63,12 @@ def process_downloads(client_id):
             file_id = os.path.join(root, file)
             file_name, file_extension = os.path.splitext(file_id)
             file_name = os.path.basename(file_name + file_extension)
-            file_id = file_id.replace(DATA_SOURCE_PATH+ "/", "")
+            file_id = file_id.replace(DATA_SOURCE_PATH+ "/", "")  # Ensure you do not send the full file path back to the client for security reasons.
             available_files.append(HitchhikerSource_pb2.FileList(file_id=file_id, file_name=file_name, file_type=file_extension))
     return available_files
 
-def deliver_to_destivation(available_files, client_id, destination_id):
+def attempt_to_deliver_to_destivation(available_files, client_id, destination_id):
+    """ Attempt to move the file from the client source folder to the destination folder. """
     count = 0
     if  create_destination_directory(destination_id) is True:
         for file in available_files:
@@ -63,6 +80,7 @@ def deliver_to_destivation(available_files, client_id, destination_id):
     return count
 
 def create_destination_directory(destination_id):
+    """ Create the base directory of the destination folder. """
     data_directory = True
     DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
     exists = os.path.exists(DATA_DESTINATION_PATH)
@@ -74,6 +92,7 @@ def create_destination_directory(destination_id):
     return data_directory
 
 def create_sub_files_destination_directory(directory_path, destination_id):
+    """ Create the subdirectories of the destination folder while maintaining the folder structure. """
     data_directory = True
     DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
     if directory_path:
@@ -86,6 +105,7 @@ def create_sub_files_destination_directory(directory_path, destination_id):
     return data_directory
 
 def move_file_to_destination(file_path, client_id, destination_id):
+    """ Move the file from the source folder to the destination folder. """
     DATA_SOURCE_PATH = os.path.join(DATA_SOURCE, client_id)
     DATA_DESTINATION_PATH = os.path.join(DATA_DESTINATION, destination_id)
     file_source = os.path.join(DATA_SOURCE_PATH, file_path)
@@ -96,8 +116,9 @@ def move_file_to_destination(file_path, client_id, destination_id):
     return not exists
     
 def get_downloads(client_id, destination_id):
+    """ get downloads while moving files to their destination. """
     available_files = process_downloads(client_id)
-    deliver_to_destivation(available_files, client_id, destination_id)
+    attempt_to_deliver_to_destivation(available_files, client_id, destination_id)
     return available_files
 
 def get_file_size(file_path):
@@ -112,6 +133,7 @@ def get_file_size(file_path):
     return file_size
 
 def get_current_storage_usage():
+    """ determine the available size of the device running the server. """
     # Get the total disk space
     total_space = os.statvfs("/").f_blocks * os.statvfs("/").f_frsize
     # Get the free disk space
@@ -120,7 +142,8 @@ def get_current_storage_usage():
     used_space = total_space - free_space
     return used_space
 
-def get_garbage_files():
+def get_all_files():
+    """ This loads all files in the data folder, returning the file path. """
     all_files = []
     for root, directories, files in os.walk(DATA_BASE):
         for file in files:
@@ -130,10 +153,11 @@ def get_garbage_files():
     return all_files
 
 def garbage_collect(max_storage_mb):
+    """ Delete files from the data folder when memory is exceeded. """
     max_storage_usage = max_storage_mb * 1024 * 1024  # Convert MB to bytes
     current_storage_usage = get_current_storage_usage()
     if current_storage_usage > max_storage_usage:
-        files = get_garbage_files()
+        files = get_all_files()
         files = sorted(files, key=lambda f: os.path.getmtime(f), reverse=True)
         while current_storage_usage > max_storage_usage and len(files) > 0:
             file_to_delete = files.pop()
