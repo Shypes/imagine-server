@@ -1,0 +1,10 @@
+venv/
+.DS_Store
+.idea/
+nohup.out
+*.pyc
+logs/
+.env
+.DS_Store
+cache/
+.vscode/

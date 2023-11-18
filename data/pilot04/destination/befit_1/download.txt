@@ -1,0 +1,726 @@
+{
+  "bankList": [
+    {
+      "institutionCode": "000001",
+      "institutionName": "Sterling Bank"
+    },
+    {
+      "institutionCode": "090176",
+      "institutionName": "Bosak Microfinance Bank"
+    },
+    {
+      "institutionCode": "090177",
+      "institutionName": "Lapo Microfinance Bank"
+    },
+    {
+      "institutionCode": "090178",
+      "institutionName": "GreenBank Microfinance Bank"
+    },
+    {
+      "institutionCode": "090179",
+      "institutionName": "FAST Microfinance Bank"
+    },
+    {
+      "institutionCode": "090180",
+      "institutionName": "Amju Unique Microfinance Bank"
+    },
+    {
+      "institutionCode": "090188",
+      "institutionName": "Baines Credit Microfinance Bank"
+    },
+    {
+      "institutionCode": "090189",
+      "institutionName": "Esan Microfinance Bank"
+    },
+    {
+      "institutionCode": "090190",
+      "institutionName": "Mutual Benefits Microfinance Bank"
+    },
+    {
+      "institutionCode": "090175",
+      "institutionName": "HighStreet Microfinance Bank"
+    },
+    {
+      "institutionCode": "090191",
+      "institutionName": "KCMB Microfinance Bank"
+    },
+    {
+      "institutionCode": "090193",
+      "institutionName": "Unical Microfinance Bank"
+    },
+    {
+      "institutionCode": "090194",
+      "institutionName": "NIRSAL Microfinance Bank"
+    },
+    {
+      "institutionCode": "090195",
+      "institutionName": "Grooming Microfinance Bank"
+    },
+    {
+      "institutionCode": "090196",
+      "institutionName": "Pennywise Microfinance Bank"
+    },
+    {
+      "institutionCode": "090197",
+      "institutionName": "ABU Microfinance Bank"
+    },
+    {
+      "institutionCode": "090198",
+      "institutionName": "RenMoney Microfinance Bank"
+    },
+    {
+      "institutionCode": "090205",
+      "institutionName": "New Dawn Microfinance Bank"
+    },
+    {
+      "institutionCode": "090251",
+      "institutionName": "UNN MFB"
+    },
+    {
+      "institutionCode": "090192",
+      "institutionName": "Midland Microfinance Bank"
+    },
+    {
+      "institutionCode": "090174",
+      "institutionName": "Malachy Microfinance Bank"
+    },
+    {
+      "institutionCode": "090173",
+      "institutionName": "Reliance Microfinance Bank"
+    },
+    {
+      "institutionCode": "090172",
+      "institutionName": "Astrapolaris Microfinance Bank"
+    },
+    {
+      "institutionCode": "090151",
+      "institutionName": "Mutual Trust Microfinance Bank"
+    },
+    {
+      "institutionCode": "090152",
+      "institutionName": "Nagarta Microfinance Bank"
+    },
+    {
+      "institutionCode": "090153",
+      "institutionName": "FFS Microfinance Bank"
+    },
+    {
+      "institutionCode": "090154",
+      "institutionName": "CEMCS Microfinance Bank"
+    },
+    {
+      "institutionCode": "090155",
+      "institutionName": "La  Fayette Microfinance Bank"
+    },
+    {
+      "institutionCode": "090156",
+      "institutionName": "e-Barcs Microfinance Bank"
+    },
+    {
+      "institutionCode": "090157",
+      "institutionName": "Infinity Microfinance Bank"
+    },
+    {
+      "institutionCode": "090158",
+      "institutionName": "Futo Microfinance Bank"
+    },
+    {
+      "institutionCode": "090159",
+      "institutionName": "Credit Afrique Microfinance Bank"
+    },
+    {
+      "institutionCode": "090160",
+      "institutionName": "Addosser Microfinance Bank"
+    },
+    {
+      "institutionCode": "090161",
+      "institutionName": "Okpoga Microfinance Bank"
+    },
+    {
+      "institutionCode": "090162",
+      "institutionName": "Stanford Microfinance Bak"
+    },
+    {
+      "institutionCode": "090164",
+      "institutionName": "First Royal Microfinance Bank"
+    },
+    {
+      "institutionCode": "090165",
+      "institutionName": "Petra Microfinance Bank"
+    },
+    {
+      "institutionCode": "090166",
+      "institutionName": "Eso-E Microfinance Bank"
+    },
+    {
+      "institutionCode": "090167",
+      "institutionName": "Daylight Microfinance Bank"
+    },
+    {
+      "institutionCode": "090168",
+      "institutionName": "Gashua Microfinance Bank"
+    },
+    {
+      "institutionCode": "090169",
+      "institutionName": "Alpha Kapital Microfinance Bank"
+    },
+    {
+      "institutionCode": "090171",
+      "institutionName": "Mainstreet Microfinance Bank"
+    },
+    {
+      "institutionCode": "090258",
+      "institutionName": "Imo State Microfinance Bank"
+    },
+    {
+      "institutionCode": "090259",
+      "institutionName": "Alekun Microfinance Bank"
+    },
+    {
+      "institutionCode": "090261",
+      "institutionName": "Quickfund Microfinance Bank"
+    },
+    {
+      "institutionCode": "090262",
+      "institutionName": "Stellas Microfinance Bank"
+    },
+    {
+      "institutionCode": "100013",
+      "institutionName": "AccessMobile"
+    },
+    {
+      "institutionCode": "100014",
+      "institutionName": "FBNMobile"
+    },
+    {
+      "institutionCode": "100015",
+      "institutionName": "Kegow"
+    },
+    {
+      "institutionCode": "100016",
+      "institutionName": "FortisMobile"
+    },
+    {
+      "institutionCode": "100017",
+      "institutionName": "Hedonmark"
+    },
+    {
+      "institutionCode": "100018",
+      "institutionName": "ZenithMobile"
+    },
+    {
+      "institutionCode": "100019",
+      "institutionName": "Fidelity Mobile"
+    },
+    {
+      "institutionCode": "100020",
+      "institutionName": "MoneyBox"
+    },
+    {
+      "institutionCode": "100021",
+      "institutionName": "Eartholeum"
+    },
+    {
+      "institutionCode": "100022",
+      "institutionName": "GoMoney"
+    },
+    {
+      "institutionCode": "100023",
+      "institutionName": "TagPay"
+    },
+    {
+      "institutionCode": "100025",
+      "institutionName": "Zinternet Nigera Limited"
+    },
+    {
+      "institutionCode": "100026",
+      "institutionName": "One Finance"
+    },
+    {
+      "institutionCode": "100029",
+      "institutionName": "Innovectives Kesh"
+    },
+    {
+      "institutionCode": "100030",
+      "institutionName": "EcoMobile"
+    },
+    {
+      "institutionCode": "100031",
+      "institutionName": "FCMB Easy Account"
+    },
+    {
+      "institutionCode": "100032",
+      "institutionName": "Contec Global Infotech Limited (NowNow)"
+    },
+    {
+      "institutionCode": "100027",
+      "institutionName": "Intellifin"
+    },
+    {
+      "institutionCode": "110001",
+      "institutionName": "PayAttitude Online"
+    },
+    {
+      "institutionCode": "100012",
+      "institutionName": "VTNetworks"
+    },
+    {
+      "institutionCode": "090150",
+      "institutionName": "Virtue Microfinance Bank"
+    },
+    {
+      "institutionCode": "100011",
+      "institutionName": "Mkudi"
+    },
+    {
+      "institutionCode": "100009",
+      "institutionName": "GTMobile"
+    },
+    {
+      "institutionCode": "090263",
+      "institutionName": "Navy Microfinance Bank"
+    },
+    {
+      "institutionCode": "090264",
+      "institutionName": "Auchi Microfinance Bank"
+    },
+    {
+      "institutionCode": "090265",
+      "institutionName": "Lovonus Microfinance Bank"
+    },
+    {
+      "institutionCode": "090266",
+      "institutionName": "Uniben Microfinance Bank"
+    },
+    {
+      "institutionCode": "090267",
+      "institutionName": "Kudimoney Microfinance Bank"
+    },
+    {
+      "institutionCode": "090268",
+      "institutionName": "Adeyemi College Staff Microfinance Bank"
+    },
+    {
+      "institutionCode": "090269",
+      "institutionName": "Greenville Microfinance Bank"
+    },
+    {
+      "institutionCode": "090270",
+      "institutionName": "AB Microfinance Bank"
+    },
+    {
+      "institutionCode": "090271",
+      "institutionName": "Lavender Microfinance Bank"
+    },
+    {
+      "institutionCode": "090273",
+      "institutionName": "Emeralds Microfinance Bank"
+    },
+    {
+      "institutionCode": "090276",
+      "institutionName": "Trustfund Microfinance Bank"
+    },
+    {
+      "institutionCode": "100001",
+      "institutionName": "FET"
+    },
+    {
+      "institutionCode": "100002",
+      "institutionName": "Paga"
+    },
+    {
+      "institutionCode": "100003",
+      "institutionName": "Parkway-ReadyCash"
+    },
+    {
+      "institutionCode": "100004",
+      "institutionName": "Paycom(Opay)"
+    },
+    {
+      "institutionCode": "100005",
+      "institutionName": "Cellulant"
+    },
+    {
+      "institutionCode": "100006",
+      "institutionName": "eTranzact"
+    },
+    {
+      "institutionCode": "100007",
+      "institutionName": "Stanbic IBTC Virtual Banking"
+    },
+    {
+      "institutionCode": "100008",
+      "institutionName": "Ecobank Xpress Account"
+    },
+    {
+      "institutionCode": "100010",
+      "institutionName": "TeasyMobile"
+    },
+    {
+      "institutionCode": "110002",
+      "institutionName": "Flutterwave Technology Solutions Limited"
+    },
+    {
+      "institutionCode": "090149",
+      "institutionName": "IRL Microfinance Bank"
+    },
+    {
+      "institutionCode": "090147",
+      "institutionName": "Hackman Microfinance Bank"
+    },
+    {
+      "institutionCode": "400001",
+      "institutionName": "FSDH Merchant Bank"
+    },
+    {
+      "institutionCode": "060001",
+      "institutionName": "Coronation Merchant Bank"
+    },
+    {
+      "institutionCode": "060002",
+      "institutionName": "FBNQUEST Merchant Bank"
+    },
+    {
+      "institutionCode": "060003",
+      "institutionName": "Nova Merchant Bank"
+    },
+    {
+      "institutionCode": "070007",
+      "institutionName": "Omoluabi savings and loans"
+    },
+    {
+      "institutionCode": "090001",
+      "institutionName": "ASOSavings & Loans"
+    },
+    {
+      "institutionCode": "090005",
+      "institutionName": "Trustbond Mortgage Bank"
+    },
+    {
+      "institutionCode": "090006",
+      "institutionName": "SafeTrust "
+    },
+    {
+      "institutionCode": "000024",
+      "institutionName": "Rand Merchant Bank"
+    },
+    {
+      "institutionCode": "090107",
+      "institutionName": "FBN Mortgages Limited"
+    },
+    {
+      "institutionCode": "100028",
+      "institutionName": "AG Mortgage Bank"
+    },
+    {
+      "institutionCode": "070009",
+      "institutionName": "Gateway Mortgage Bank"
+    },
+    {
+      "institutionCode": "070010",
+      "institutionName": "Abbey Mortgage Bank"
+    },
+    {
+      "institutionCode": "070011",
+      "institutionName": "Refuge Mortgage Bank"
+    },
+    {
+      "institutionCode": "070012",
+      "institutionName": "Lagos Building Investment Company"
+    },
+    {
+      "institutionCode": "070013",
+      "institutionName": "Platinum Mortgage Bank"
+    },
+    {
+      "institutionCode": "070014",
+      "institutionName": "First Generation Mortgage Bank"
+    },
+    {
+      "institutionCode": "070015",
+      "institutionName": "Brent Mortgage Bank"
+    },
+    {
+      "institutionCode": "100024",
+      "institutionName": "Imperial Homes Mortgage Bank"
+    },
+    {
+      "institutionCode": "000023",
+      "institutionName": "Providus Bank "
+    },
+    {
+      "institutionCode": "000022",
+      "institutionName": "Suntrust Bank"
+    },
+    {
+      "institutionCode": "000021",
+      "institutionName": "StandardChartered"
+    },
+    {
+      "institutionCode": "000002",
+      "institutionName": "Keystone Bank"
+    },
+    {
+      "institutionCode": "000003",
+      "institutionName": "FCMB"
+    },
+    {
+      "institutionCode": "000004",
+      "institutionName": "United Bank for Africa"
+    },
+    {
+      "institutionCode": "000005",
+      "institutionName": "Diamond Bank"
+    },
+    {
+      "institutionCode": "000006",
+      "institutionName": "JAIZ Bank"
+    },
+    {
+      "institutionCode": "000007",
+      "institutionName": "Fidelity Bank"
+    },
+    {
+      "institutionCode": "000008",
+      "institutionName": "Polaris  Bank"
+    },
+    {
+      "institutionCode": "000009",
+      "institutionName": "Citi Bank"
+    },
+    {
+      "institutionCode": "000010",
+      "institutionName": "Ecobank Bank"
+    },
+    {
+      "institutionCode": "000011",
+      "institutionName": "Unity Bank"
+    },
+    {
+      "institutionCode": "000012",
+      "institutionName": "StanbicIBTC Bank"
+    },
+    {
+      "institutionCode": "000013",
+      "institutionName": "GTBank Plc"
+    },
+    {
+      "institutionCode": "000014",
+      "institutionName": "Access Bank"
+    },
+    {
+      "institutionCode": "000015",
+      "institutionName": "Zenith Bank Plc"
+    },
+    {
+      "institutionCode": "000016",
+      "institutionName": "First Bank of Nigeria"
+    },
+    {
+      "institutionCode": "000017",
+      "institutionName": "Wema Bank"
+    },
+    {
+      "institutionCode": "000018",
+      "institutionName": "Union Bank"
+    },
+    {
+      "institutionCode": "000019",
+      "institutionName": "Enterprise Bank"
+    },
+    {
+      "institutionCode": "000020",
+      "institutionName": "Heritage"
+    },
+    {
+      "institutionCode": "070016",
+      "institutionName": "Infinity Trust Mortgage Bank"
+    },
+    {
+      "institutionCode": "090003",
+      "institutionName": "Jubilee-Life Mortgage  Bank"
+    },
+    {
+      "institutionCode": "070017",
+      "institutionName": "Haggai Mortgage Bank Limited"
+    },
+    {
+      "institutionCode": "090108",
+      "institutionName": "New Prudential Bank"
+    },
+    {
+      "institutionCode": "090128",
+      "institutionName": "Ndiorah Microfinance Bank"
+    },
+    {
+      "institutionCode": "090129",
+      "institutionName": "Money Trust Microfinance Bank"
+    },
+    {
+      "institutionCode": "090130",
+      "institutionName": "Consumer Microfinance Bank"
+    },
+    {
+      "institutionCode": "090131",
+      "institutionName": "Allworkers Microfinance Bank"
+    },
+    {
+      "institutionCode": "090132",
+      "institutionName": "Richway Microfinance Bank"
+    },
+    {
+      "institutionCode": "090133",
+      "institutionName": " AL-Barakah Microfinance Bank"
+    },
+    {
+      "institutionCode": "090134",
+      "institutionName": "Accion Microfinance Bank"
+    },
+    {
+      "institutionCode": "090135",
+      "institutionName": "Personal Trust Microfinance Bank"
+    },
+    {
+      "institutionCode": "090136",
+      "institutionName": "Baobab Microfinance Bank"
+    },
+    {
+      "institutionCode": "090137",
+      "institutionName": "PecanTrust Microfinance Bank"
+    },
+    {
+      "institutionCode": "090138",
+      "institutionName": "Royal Exchange Microfinance Bank"
+    },
+    {
+      "institutionCode": "090139",
+      "institutionName": "Visa Microfinance Bank"
+    },
+    {
+      "institutionCode": "090140",
+      "institutionName": "Sagamu Microfinance Bank"
+    },
+    {
+      "institutionCode": "090141",
+      "institutionName": "Chikum Microfinance Bank"
+    },
+    {
+      "institutionCode": "090142",
+      "institutionName": "Yes Microfinance Bank"
+    },
+    {
+      "institutionCode": "090143",
+      "institutionName": "Apeks Microfinance Bank"
+    },
+    {
+      "institutionCode": "090144",
+      "institutionName": "CIT Microfinance Bank"
+    },
+    {
+      "institutionCode": "090145",
+      "institutionName": "Fullrange Microfinance Bank"
+    },
+    {
+      "institutionCode": "090146",
+      "institutionName": "Trident Microfinance Bank"
+    },
+    {
+      "institutionCode": "090127",
+      "institutionName": "BC Kash Microfinance Bank"
+    },
+    {
+      "institutionCode": "090148",
+      "institutionName": "Bowen Microfinance Bank"
+    },
+    {
+      "institutionCode": "090126",
+      "institutionName": "Fidfund Microfinance Bank"
+    },
+    {
+      "institutionCode": "090124",
+      "institutionName": "Xslnce Microfinance Bank"
+    },
+    {
+      "institutionCode": "070001",
+      "institutionName": "NPF MicroFinance Bank"
+    },
+    {
+      "institutionCode": "070002",
+      "institutionName": "Fortis Microfinance Bank"
+    },
+    {
+      "institutionCode": "070006",
+      "institutionName": "Covenant MFB"
+    },
+    {
+      "institutionCode": "070008",
+      "institutionName": "Page Microfinance Bank"
+    },
+    {
+      "institutionCode": "090004",
+      "institutionName": "Parralex Microfinance bank"
+    },
+    {
+      "institutionCode": "090097",
+      "institutionName": "Ekondo MFB"
+    },
+    {
+      "institutionCode": "090110",
+      "institutionName": "VFD MFB"
+    },
+    {
+      "institutionCode": "090111",
+      "institutionName": "FinaTrust Microfinance Bank"
+    },
+    {
+      "institutionCode": "090112",
+      "institutionName": "Seed Capital Microfinance Bank"
+    },
+    {
+      "institutionCode": "090114",
+      "institutionName": "Empire trust MFB"
+    },
+    {
+      "institutionCode": "090115",
+      "institutionName": "TCF MFB"
+    },
+    {
+      "institutionCode": "090116",
+      "institutionName": "AMML MFB"
+    },
+    {
+      "institutionCode": "090117",
+      "institutionName": "Boctrust Microfinance Bank"
+    },
+    {
+      "institutionCode": "090118",
+      "institutionName": "IBILE Microfinance Bank"
+    },
+    {
+      "institutionCode": "090119",
+      "institutionName": "Ohafia Microfinance Bank"
+    },
+    {
+      "institutionCode": "090120",
+      "institutionName": "Wetland Microfinance Bank"
+    },
+    {
+      "institutionCode": "090121",
+      "institutionName": "Hasal Microfinance Bank"
+    },
+    {
+      "institutionCode": "090122",
+      "institutionName": "Gowans Microfinance Bank"
+    },
+    {
+      "institutionCode": "090123",
+      "institutionName": "Verite Microfinance Bank"
+    },
+    {
+      "institutionCode": "090125",
+      "institutionName": "Regent Microfinance Bank"
+    }
+  ],
+  "responseCode": "00",
+  "resposeMsg": "success"
+}
